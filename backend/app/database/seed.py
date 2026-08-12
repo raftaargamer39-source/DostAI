@@ -11,8 +11,8 @@ def seed_db():
     db.query(OfferModel).delete()
 
     # Add Demo Users
-    u1 = UserModel(id="u-demo-1", name="Rahul Sharma", email="user@dostai.demo", role="USER")
-    u2 = UserModel(id="b-owner-1", name="City Mall Manager", email="business@dostai.demo", role="BUSINESS")
+    u1 = UserModel(id="u-demo-1", name="Rahul Sharma", email="user@dostai.demo", role="USER", password_hash="demo_hash_1")
+    u2 = UserModel(id="b-owner-1", name="City Mall Manager", email="business@dostai.demo", role="BUSINESS", password_hash="demo_hash_2")
     db.add_all([u1, u2])
 
     # Add Demo Businesses
